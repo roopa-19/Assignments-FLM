@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exponent Calculator</title>
+</head>
+
+<body>
+    <h1>Exponential Calculator</h1>
+    <main>
+        <form>
+            <input type="text" id="value1" placeholder="Enter 1st Value">
+            <input type="text" id="value2" placeholder="Enter 2nd Value"><br><br>
+            <input type="submit" id="power" value="Click here to find the exponent!">
+        </form>
+        <div id="result"></div>
+    </main>
+</body>
+<script>
+        let addButton=document.querySelector("#power");
+        addButton.addEventListener("click",myPowerFunction);
+
+        function myPowerFunction(){
+                event.preventDefault();
+                let a = document.querySelector("#value1").value;
+                let b = document.querySelector("#value2").value;
+                let result=1;
+                for(let i=1;i<=b;i++){
+                    result=result*a;
+                }
+                document.querySelector("#result").innerHTML=result;
+                alert(a+"^"+b+" ="+result);
+            }
+
+</script>
+
+</html>

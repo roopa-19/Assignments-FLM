@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+</head>
+<body>
+    <h1>Mini Calculator</h1>
+    <main>
+        <form >
+            <input type="text" id="value1" placeholder="Enter 1st Value">
+            <input type="text" id="value2" placeholder="Enter 2nd Value"><br><br>
+            <input type="submit" id="add" value="ADD">
+            <input type="submit" id="sub" value="SUB">
+            <input type="submit" id="mul" value="MUL">
+            <input type="submit" id="div" value="DIV">
+        </form>
+        <div id="result"></div>
+    </main>
+</body>
+</html>
+<script>
+    let addButton=document.querySelector("#add");
+    addButton.addEventListener("click",myAddition);
+    let subButton=document.querySelector("#sub");
+    subButton.addEventListener("click",mySubtraction);
+    let mulButton=document.querySelector("#mul");
+    mulButton.addEventListener("click",myMultiplication);
+    let divButton=document.querySelector("#div");
+    divButton.addEventListener("click",myDivision);
+    function myAddition(){
+        event.preventDefault();
+        let a=document.querySelector("#value1").value;
+        let b=document.querySelector("#value2").value;
+        document.querySelector("#result").innerText=Number(a)+Number(b);
+    }
+ 
+    function mySubtraction(){
+
+        event.preventDefault();
+        let a=document.querySelector("#value1").value;
+        let b=document.querySelector("#value2").value;
+        document.querySelector("#result").innerText=Number(a)-Number(b);
+    }
+
+    function myMultiplication(){
+        event.preventDefault();
+        let a=document.querySelector("#value1").value;
+        let b=document.querySelector("#value2").value;
+        document.querySelector("#result").innerText=Number(a)*Number(b);
+    }
+
+    function myDivision(){
+        event.preventDefault();
+        let a=document.querySelector("#value1").value;
+        let b=document.querySelector("#value2").value;
+        document.querySelector("#result").innerText=Number(a)/Number(b);
+    }
+</script>

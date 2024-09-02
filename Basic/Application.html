@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>School Application</h1>
+    <p>Enter Your name and gender to apply for school</p>
+    <h2 id="display">Display entered name and gender here</h2>
+    <hr>
+    <form>
+        <input type="text" id="name" placeholder="Enter your name">
+        <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <input type="submit" value="Apply">
+    </form>
+
+</body>
+
+</html>
+<script>
+    
+    document.querySelector("form").addEventListener("submit",myFunction);
+    function myFunction(){
+        event.preventDefault();
+        let name=document.querySelector("#name").value;
+        let gender=document.querySelector("#gender").value;
+        let res=document.querySelector("#display");
+        res.innerHTML=name + " " + gender;
+    }
+
+</script>

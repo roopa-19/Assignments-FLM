@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>This example demonstrates how we can change text content when
+        clicking on button</h4>
+    <hr>
+    <h1 id="display">Click on Login to continue</h1>
+    <button onClick="login()">Login</button>
+    <button onClick="logout()">Logout</button>
+</body>
+
+</html>
+<script>
+    function login() {
+        document.getElementById("display").innerText="Logged in Successfully.";
+    }
+    function logout() {
+        document.getElementById("display").innerText="Logged out Successfully.";
+    }
+</script>

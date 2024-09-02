@@ -1,0 +1,264 @@
+
+
+#navbar{
+   height: 60px;
+   display: grid;
+   grid-template-columns:auto auto auto;
+   align-items: center;
+   box-shadow:inset 1px 1px 2px rgb(183, 179, 179),1px 1px 2px rgb(183, 179, 179);
+}
+#logo{
+    width:70px;
+    height:50px;
+}
+div{
+    color: dodgerblue;
+    font-size: 18px;
+    cursor:pointer;
+
+}
+#services{
+    width:800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#logo-part{
+    width:300px;
+    display:grid;
+    justify-items: center;
+}
+#button{
+    width:300px;
+    display:grid;
+    justify-items: center;
+}
+button{
+    width:110px;
+    padding:10px;
+    border-radius: 6px;
+    background-color: red;
+    color:white;
+    font-size: 18px;
+    border:2px solid white ;
+    cursor:pointer;
+}
+#deals{
+    background-color:rgb(6, 15, 31);
+    display:flex;
+    justify-content: center;   
+    padding:20px;
+    margin:20px;
+    gap:60px; 
+
+}
+#deals img{
+    width:230px;
+    height:200px;
+}
+#items{
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(4,300px);
+    grid-template-rows: repeat(2,350px);
+    justify-content: center;
+    grid-gap:20px;
+}
+.food-items >img{
+    width:100%;
+    height:200px;
+}
+.food-items{
+    display:grid;
+    box-shadow:0px 0px 10px gray ;
+    text-align:center;
+
+}
+.food-items > img, .food-items > h3, .food-items > h4,.food-items > p{
+    color:black;
+    margin:0px;
+    padding:0px;
+}
+/*  footer part */
+footer{
+  width:87%;
+  margin:20px auto;
+}
+.f-img{
+    width:30%;
+    height:300px;
+}
+#picks{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    gap:50px;
+}
+
+@media screen  and (max-width:1100px) and (min-width:787px){
+    body{
+        background-color:blanchedalmond;
+    }
+    #navbar{
+        height: 100px;
+        grid-template-columns:200px 500px 200px;
+    }
+    #logo-part{
+        width:100px;
+        padding:0 10px;
+    
+    }
+    #logo{
+        width:90px;
+        height:90px;
+
+    }
+    #services{
+        width:500px;
+    }
+    #button{
+        width:300px;
+        display:grid;
+        justify-items: center;
+    }
+    button{
+        width:110px;
+        padding:7px;
+        font-size: 16px;
+      
+    }
+    #deals{
+        flex-wrap:wrap;  
+        gap:10px; 
+    
+    }
+    #deals img{
+        width:200px;
+        height:200px;
+    }
+    #items{
+        grid-template-columns: repeat(3,250px);
+        grid-template-rows: repeat(3,300px);
+    }
+    .food-items  img{
+        height:150px;
+      
+    }
+    /*footer*/
+    .f-img{
+        height:150px;
+    }
+    #picks{
+        gap:10px;
+    }
+}
+
+@media screen  and (max-width:786px) and (min-width:480px)  {
+    body{
+        background-color:cornflowerblue;
+    }
+    #navbar{
+        height: 100px;
+        grid-template-columns:80px 300px 150px;
+    }
+    #logo-part{
+        width:80px;
+        padding:0 10px;
+    
+    }
+    #logo{
+        width:60px;
+        height:60px;
+
+    }
+    #services{
+        width:400px;   
+    }
+    div{
+        color: rgb(242, 245, 248);
+        font-size: 14px;
+    }
+    button{
+        width:70px;
+        font-size: 15px;
+    }
+    #deals{
+        flex-wrap:wrap;  
+        padding:10px;
+        margin:10px;
+        gap:10px; 
+    
+    }
+    #items{
+        grid-template-columns: repeat(2,250px);
+        grid-template-rows: repeat(2,300px);
+    }
+    .food-items{
+        box-shadow:0px 0px 10px yellow ;
+    }
+    .food-items > img, .food-items > h3, .food-items > h4,.food-items > p{
+        color:black;
+    }
+     .f-img{
+          height:200px;
+      }
+     #picks{
+          gap:10px;
+      }   
+     
+}
+@media screen and (max-width:479px) {
+    body{
+        background-color:cornflowerblue;
+    }
+    #navbar{
+        height: 100px;
+        grid-template-columns:80px 200px 200px;
+    }
+    #logo-part{
+        width:50px;  
+    }
+    #logo{
+      
+        height:50px;
+
+    }
+    #services{
+        width:250px;   
+    }  
+    #button{
+        width:200px;
+        display:grid;
+        justify-items: center;
+    
+    }
+    button{
+        width:70px;
+        padding:8px;
+        font-size: 12px;
+      
+    }
+    div{
+        color: rgb(242, 245, 248);
+        font-size: 14px;
+    }
+
+#deals{
+    flex-wrap:wrap;  
+    padding:10px;
+    margin:10px;
+    gap:10px; 
+
+}
+#items{
+    grid-template-columns: repeat(1,300px);
+    grid-template-rows: repeat(2,300px);
+}
+.f-img{
+    height:300px;
+    width:300px;
+}
+#picks{
+    gap:10px;
+} 
+}
