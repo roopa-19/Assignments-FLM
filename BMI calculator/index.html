@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body{
+            background-color:cornflowerblue
+        }
+        #result{
+            font-size: 25px;
+            font-weight:800;
+            margin:10px 110px;
+        }
+        label{
+            font-size: 20px;
+            display:inline;
+            margin:10px;
+            @media screen and (min-width:786px){
+                font-size: 25px;
+               
+            }
+        }
+        input{
+            display:block;
+            margin:10px ;
+            width:50%;
+            font-size: large;
+            @media screen and (min-width:786px){
+                width:18%;
+                font-size: 25px;
+                  position:relative;
+                left:600px; 
+               border-radius: 8px;
+            }
+        }
+        button{
+            background-color:indianred;
+            color:darkblue;
+            font-size: 20px;
+            border-radius:8px;
+            margin:5px 100px;
+        }
+        @media screen and (min-width:786px){
+            body{
+                background-color: rgb(126, 243, 126);
+                text-align:center;
+            }
+            button{
+                margin:30px 0;
+                width:300px;
+                padding:10px;
+                font-size:25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    let body=document.querySelector("body");
+    let h1=document.createElement("h1");
+    h1.innerText="Check Your BMI";
+    let para=document.createElement("p");
+    para.innerHTML="Enter your weight and height below to check your BMI results";
+    let label=document.createElement("label");
+    label.innerHTML="Enter your weight in here (KG)";
+    let input1=document.createElement("input");
+    let label2=document.createElement("label");
+    label2.innerHTML="Enter your height in here (CM)";
+    let input2=document.createElement("input");
+    input1.setAttribute("type","number");
+    input2.setAttribute("type","number");
+    label.append(input1);
+    label2.append(input2);
+    let btn=document.createElement("button");
+    btn.innerHTML="Calculate BMI";
+    btn.setAttribute("onClick","myFunction()");
+    body.append(h1,para,label,label2,btn);
+    h1.style.fontSize="50px";
+    para.style.fontSize="20px";
+    para.style.fontWeight="800";
+    let para1=document.createElement("p");
+    para1.setAttribute("id","result");
+    input1.setAttribute("id","weight");
+    input2.setAttribute("id","height");
+    body.append(h1,para,label,label2,btn,para1);
+    function myFunction(){
+        // let h=document.querySelector("#height").value();
+        // let w=
+        let bmi=input1.value/((input2.value/100)*(input2.value/100));
+        console.log(bmi);
+         if(Math.ceil(bmi)<=18){
+            document.querySelector("#result").innerHTML="UnderWeight";
+        }else if(Math.ceil(bmi)>=18 && Math.ceil(bmi)<=24){
+            document.querySelector("#result").innerHTML="NormalWeight";
+        }else if(Math.ceil(bmi)>=25 && Math.ceil(bmi)<=29){
+            document.querySelector("#result").innerHTML="OverWeight";
+        }else{
+            document.querySelector("#result").innerHTML="OBESE";
+        }
+    }
+    
+
+</script>
+</html>
